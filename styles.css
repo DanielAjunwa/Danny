@@ -1,0 +1,162 @@
+/* styles.css — Modern clean portfolio */
+/* Variables */
+:root{
+  --bg:#E8F0FE;
+  --primary:#1A73E8;
+  --navy:#0B3954;
+  --muted:#6b7280;
+  --card:#ffffff;
+  --radius:12px;
+  --container:1100px;
+  --gap:1.25rem;
+  --shadow: 0 8px 20px rgba(11,57,84,0.08);
+  --max-width:1200px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:"Open Sans",system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+  background:var(--bg);
+  color:#102a43;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.55;
+  font-size:16px;
+}
+
+.container{
+  max-width:var(--container);
+  margin:0 auto;
+  padding:1.25rem;
+}
+
+/* Header */
+.site-header{
+  background:linear-gradient(90deg,var(--navy),rgba(10,30,50,0.9));
+  color:white;
+  position:sticky;
+  top:0;
+  z-index:50;
+}
+.header-inner{
+  display:flex;
+  align-items:center;
+  gap:1rem;
+  justify-content:space-between;
+  max-width:var(--container);
+  margin:0 auto;
+  padding:0.75rem 1.25rem;
+}
+.brand{
+  color:white;
+  text-decoration:none;
+  font-weight:700;
+  font-family:"Montserrat",sans-serif;
+  letter-spacing:0.2px;
+}
+.nav-toggle{
+  display:none;
+  background:transparent;
+  border:0;
+  color:white;
+}
+.site-nav{
+  display:flex;
+  gap:0.75rem;
+  align-items:center;
+}
+.site-nav a{
+  color:rgba(255,255,255,0.95);
+  text-decoration:none;
+  padding:0.5rem 0.6rem;
+  border-radius:8px;
+  font-weight:600;
+}
+.site-nav a.cta{
+  background:rgba(255,255,255,0.08);
+}
+
+/* HERO */
+.hero{
+  padding:3.25rem 0;
+}
+.hero-grid{
+  display:grid;
+  grid-template-columns:1fr 360px;
+  gap:2rem;
+  align-items:center;
+  max-width:var(--max-width);
+  margin:0 auto;
+}
+.hero h1{
+  font-family:"Montserrat",sans-serif;
+  margin:0 0 0.5rem;
+  font-size: clamp(1.6rem, 2.6vw, 2.4rem);
+  color:var(--navy);
+}
+.lead{
+  font-size:1.05rem;
+  color:var(--muted);
+}
+.hero-ctas{margin-top:1rem;display:flex;gap:0.75rem}
+.btn{
+  background:var(--primary);
+  color:white;
+  padding:0.65rem 1rem;
+  border-radius:999px;
+  text-decoration:none;
+  display:inline-block;
+  font-weight:600;
+}
+.btn.ghost{background:transparent;border:2px solid rgba(26,115,232,0.12);color:var(--navy)}
+.meta{color:var(--muted);font-size:0.92rem;margin-top:0.75rem}
+
+/* phone mock */
+.phone-mock{width:280px;height:420px;background:linear-gradient(180deg,#fff,#f7fbff);border-radius:18px;box-shadow:var(--shadow);display:flex;align-items:center;justify-content:center}
+.phone-screen{width:88%;height:88%;border-radius:12px;background:linear-gradient(180deg,#0b3954,#1a73e8);color:white;padding:14px;display:flex;flex-direction:column;justify-content:center}
+.phone-screen h3{margin:0 0 6px;font-size:1.05rem}
+.phone-screen .tiny{opacity:0.9;font-size:0.9rem}
+
+/* Sections */
+.section{padding:2.25rem 0}
+.section.alt{background:transparent;padding:2.25rem 0}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:0.5rem}
+.card{
+  background:var(--card);
+  border-radius:var(--radius);
+  padding:1rem;
+  box-shadow:var(--shadow);
+}
+.card h3{margin-top:0}
+
+.project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.project{background:var(--card);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--shadow)}
+.project-thumb{width:100%;height:160px;object-fit:cover;background:#eef3fb}
+.project-body{padding:1rem}
+.muted{color:var(--muted)}
+
+/* Contact form */
+.contact-form{display:flex;flex-direction:column;gap:0.5rem;background:var(--card);padding:1rem;border-radius:10px;box-shadow:var(--shadow);max-width:480px}
+.contact-form label{font-size:0.9rem;font-weight:600}
+.contact-form input,.contact-form textarea{padding:0.6rem;border-radius:8px;border:1px solid #e6eef9;background:#fcfdff}
+.contact-form button{margin-top:0.5rem}
+
+/* Footer */
+.site-footer{padding:1rem 0;background:transparent;text-align:center;color:var(--muted)}
+
+/* Responsive */
+@media (max-width:980px){
+  .hero-grid{grid-template-columns:1fr}
+  .project-grid{grid-template-columns:1fr}
+  .cards-grid{grid-template-columns:1fr 1fr}
+  .split{grid-template-columns:1fr}
+}
+@media (max-width:720px){
+  .site-nav{display:none}
+  .nav-toggle{display:block}
+  .header-inner{padding:0.5rem 1rem}
+  .cards-grid{grid-template-columns:1fr}
+}
