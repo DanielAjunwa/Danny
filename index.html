@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Daniel Ajunwa — Software Development Portfolio</title>
+  <meta name="description" content="E-portfolio of Daniel Ajunwa — Computer Systems Technology student. Projects, skills, and contact." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home">Daniel Ajunwa</a>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO / HOME -->
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <h1>Software Development Portfolio</h1>
+          <p class="lead">I’m <strong>Daniel Ajunwa</strong> — a Computer Systems Technology student focused on mobile & web development, clean code, and practical solutions.</p>
+          <div class="hero-ctas">
+            <a class="btn" href="#projects">View Projects</a>
+            <a class="btn ghost" href="#about">About Me</a>
+          </div>
+          <p class="meta">Last updated: <time datetime="2025-11">November 2025</time></p>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <!-- Placeholder phone / graphic; replace with screenshot -->
+          <div class="card phone-mock">
+            <div class="phone-screen">
+              <div class="phone-header"></div>
+              <div class="phone-body">
+                <h3>Noise Exposure Tracker</h3>
+                <p class="tiny">Track dB, duration & exposure budget</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section container">
+      <h2>About Me</h2>
+      <div class="split">
+        <div>
+          <p>I am a Computer Systems Technology student passionate about software development, mobile applications, and system design. I enjoy building practical tools that help people and learning new technologies to deliver better solutions.</p>
+          <p><strong>Career goals:</strong> Software developer (backend/full-stack), Android development, accessibility-focused projects, and continued growth in React, Node.js and cloud services.</p>
+        </div>
+        <div>
+          <h3>Strengths</h3>
+          <ul>
+            <li>Clean, maintainable code & debugging</li>
+            <li>Client support experience (CNIB) — clear communication</li>
+            <li>Project planning, version control, and testing</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section alt container">
+      <h2>Skills & Experience</h2>
+      <div class="cards-grid">
+        <div class="card">
+          <h3>Languages</h3>
+          <p>Java · Python · C# · JavaScript · SQL</p>
+        </div>
+        <div class="card">
+          <h3>Web & Mobile</h3>
+          <p>React (learning) · Node.js · HTML/CSS · Android Studio (Java) · SQLite</p>
+        </div>
+        <div class="card">
+          <h3>Tools</h3>
+          <p>Git/GitHub · Trello · IntelliJ · VS Code · Postman</p>
+        </div>
+      </div>
+
+      <h3 style="margin-top:1.25rem">Experience</h3>
+      <div class="split">
+        <div>
+          <h4>Client Support Assistant — CNIB</h4>
+          <p>Assisted clients with accessibility tech, simplified technical instructions, and improved user confidence.</p>
+        </div>
+        <div>
+          <h4>Academic Projects — CST Program</h4>
+          <p>Developed mobile and desktop apps, implemented databases, and completed network/security labs.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section container">
+      <h2>Projects</h2>
+
+      <div class="project-grid">
+        <!-- Project Item -->
+        <article class="project">
+          <img src="assets/noise-app.png" alt="Noise Exposure Tracker screenshot" class="project-thumb" onerror="this.style.opacity=.25">
+          <div class="project-body">
+            <h3>Noise Exposure Tracker (Android)</h3>
+            <p class="muted">Java · Android Studio · SQLite</p>
+            <p>An Android app that records noise exposure entries (dB, duration, environment), stores them in a local database, and calculates a daily exposure budget.</p>
+            <details>
+              <summary>Reflection</summary>
+              <p>This project strengthened my mobile development and database design skills. I implemented RecyclerView, a local SQLite schema, and calculation logic using dB × hours to approximate exposure budgeting.</p>
+            </details>
+            <a class="link" href="#contact">Request demo</a>
+          </div>
+        </article>
+
+        <article class="project">
+          <img src="assets/mock-interview.png" alt="Mock interview document" class="project-thumb" onerror="this.style.opacity=.25">
+          <div class="project-body">
+            <h3>Mock Interview (STAR Format)</h3>
+            <p class="muted">Communication · Career prep</p>
+            <p>Mock interview answers that showcase STAR-format responses about teamwork, failure, and technical communication.</p>
+            <details>
+              <summary>Reflection</summary>
+              <p>Improved my ability to explain technical work and translate complex topics to non-technical audiences — a skill useful in client support and team settings.</p>
+            </details>
+            <a class="link" href="#contact">Download</a>
+          </div>
+        </article>
+
+        <article class="project">
+          <img src="assets/student-db.png" alt="Student database system" class="project-thumb" onerror="this.style.opacity=.25">
+          <div class="project-body">
+            <h3>C# Student Database System</h3>
+            <p class="muted">C# · Desktop · SQL</p>
+            <p>Group project to manage student records. I refactored the database schema, fixed relationships, and improved maintainability.</p>
+            <details>
+              <summary>Reflection</summary>
+              <p>Learned the importance of schema planning and early testing; improved debugging and collaboration under a deadline.</p>
+            </details>
+            <a class="link" href="#contact">Request source</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section alt container">
+      <h2>Contact</h2>
+      <div class="split">
+        <div>
+          <p>If you'd like to connect about opportunities, feedback, or collaboration, email me:</p>
+          <p><strong>Email:</strong> <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+          <p><strong>GitHub:</strong> <a href="https://github.com/your-github" target="_blank" rel="noopener">github.com/your-github</a></p>
+          <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/your-linkedin" target="_blank" rel="noopener">linkedin.com/in/your-linkedin</a></p>
+          <p class="muted">Location: Canada</p>
+        </div>
+        <form class="contact-form" action="mailto:your-email@example.com" method="get" enctype="text/plain">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Your name" required>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" placeholder="Write your message..." required></textarea>
+          <button class="btn" type="submit">Send Email</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Daniel Ajunwa — Built with HTML/CSS. Last updated November 2025.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
